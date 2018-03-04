@@ -20,18 +20,20 @@ void solution()
 	int number[501] = { 0 };	//number是最短路的条数
 	int dis[501];				//dis是dij算法中，起点到其他城市的最短路径
 	int rescue[501] = { 0 };	//保存目前为止，走过的城市中，救援队数量最多的
-
 	int min, k;					//用于在dij算法中的循环
 
 
 	fill(road[0], road[0] + 501 * 501, MAX);
 	fill(dis, dis + 501, MAX);
-	cin >> n >> m >> start >> end;	//输入第一行的值    n是城市的数量，m是路的条数，start是起始城市，end是终点
+	//输入第一行的值    n是城市的数量，m是路的条数，start是起始城市，end是终点
+	cin >> n >> m >> start >> end;	
 	for (int i = 0; i < n; i++)
 	{
-		cin >> person[i];		//输入救援队的值
+		//输入救援队的值
+		cin >> person[i];		
 	}
-	for (int i = 0; i < m; i++)		//M条路，输入这个图的编标信息
+	//M条路，输入这个图的编标信息
+	for (int i = 0; i < m; i++)		
 	{
 		cin >> road_a >> road_b;
 		cin >> road[road_a][road_b];
@@ -55,14 +57,16 @@ void solution()
 		min = MAX;
 		for (int j = 0; j < n; j++)
 		{
-			if (!visit[j] && dis[j] < min)		//先找出距离start最短的点
+			//先找出距离start最短的点
+			if (!visit[j] && dis[j] < min)		
 			{ 
 				k = j;
 				min = dis[j];
 			}		
 		}
-
-		visit[k] = 1;	//这个点就被访问了，第一个k是start点本身自己，第一个min是0
+		
+		//这个点就被访问了，第一个k是start点本身自己，第一个min是0
+		visit[k] = 1;	
 		
 
 
@@ -85,7 +89,6 @@ void solution()
 		}
 	}
 	//这个时候，dis数组里保存的是从start点开始到各个点的最短路径的长度。
-
 	cout << number[end] << ' ' << rescue[end];
 
 }
