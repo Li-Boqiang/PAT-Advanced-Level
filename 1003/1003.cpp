@@ -62,7 +62,7 @@ void solution()
 			}		
 		}
 
-		visit[k] = 1;							//这个点就被访问了，第一个k是start点本身自己，第一个min是0
+		visit[k] = 1;	//这个点就被访问了，第一个k是start点本身自己，第一个min是0
 		
 
 
