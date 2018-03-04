@@ -25,7 +25,6 @@ void solution(void)
 int main(void)
 {
 	solution();
-
 	system("pause");
 	return 0;
 }
