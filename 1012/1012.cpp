@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<algorithm>
 #include<string>
 #pragma warning(disable:4996)
@@ -38,9 +38,9 @@ void solution()
 		cin >> student[i].score[0] >> student[i].score[1] >> student[i].score[2];
 		student[i].aver = (student[i].score[0] + student[i].score[1] + student[i].score[2]) / 3.0;
 	}
-	//ÊäÈëÍê±Ï
+	//è¾“å…¥å®Œæ¯•
 
-	sort(student, student + x, comp_aver);	//°´ÕÕ¾ù·Öpaiming
+	sort(student, student + x, comp_aver);	//æŒ‰ç…§å‡åˆ†paiming
 	//student[0].best = 1;
 	student[0].rank[0] = 1;
 	for (int i = 1; i < x; i++)
@@ -66,7 +66,7 @@ void solution()
 			}
 		}
 	}
-	//È·¶¨×îÖÕÅÅÃû
+	//ç¡®å®šæœ€ç»ˆæ’å
 	for (int i = 0; i < x; i++)
 	{
 		int minn = student[i].rank[3];

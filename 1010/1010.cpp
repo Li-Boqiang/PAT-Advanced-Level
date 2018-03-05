@@ -1,8 +1,8 @@
-//Ë¼Â··ÖÎö£º
-//1¡¢ÐèÒª½«Ã¿¸öÊý¶¼±ä³ÉÊ®½øÖÆ£¬·½±ã±È½Ï¡£
-//2¡¢¸ø¶¨µÄ½øÖÆÖ»ÄÜÔÚ£¨¸øµÄÊýµÄÊýÂë×î´ó+1£©~max(ÁíÒ»¸öÊýµÄÖµ£¬ÊýÂë×î´ó)+1£¨±ØÐë¼Ó1£¬ÏÂÃæ¸ø³öÀíÓÉ£©ÖÐ¸ø³ö¡£  ÒòÎª»á³öÏÖÕâÖÖÇé¿ö£¬5 5 1 10£¬ÕâÖÖÇé¿öÏÔÈ»ÊÇ6½øÖÆ·ûºÏÒªÇó¡£
-//3¡¢Ê¹ÓÃ¶þ·Ö·¨ËÑË÷
-//4¡¢powº¯ÊýµÄ·µ»ØÖµÊÇdouble£¬ÔÚlonglongint ÖÐ£¬µ±ÊýºÜ´óµÄÊ±ºò£¬»á¶ªÊ§¾«¶È£¬ËùÒÔ»¹ÐèÒª×Ô¼ºÐ´Ò»¸ö³Ë·½º¯Êý
+ï»¿//æ€è·¯åˆ†æžï¼š
+//1ã€éœ€è¦å°†æ¯ä¸ªæ•°éƒ½å˜æˆåè¿›åˆ¶ï¼Œæ–¹ä¾¿æ¯”è¾ƒã€‚
+//2ã€ç»™å®šçš„è¿›åˆ¶åªèƒ½åœ¨ï¼ˆç»™çš„æ•°çš„æ•°ç æœ€å¤§+1ï¼‰~max(å¦ä¸€ä¸ªæ•°çš„å€¼ï¼Œæ•°ç æœ€å¤§)+1ï¼ˆå¿…é¡»åŠ 1ï¼Œä¸‹é¢ç»™å‡ºç†ç”±ï¼‰ä¸­ç»™å‡ºã€‚  å› ä¸ºä¼šå‡ºçŽ°è¿™ç§æƒ…å†µï¼Œ5 5 1 10ï¼Œè¿™ç§æƒ…å†µæ˜¾ç„¶æ˜¯6è¿›åˆ¶ç¬¦åˆè¦æ±‚ã€‚
+//3ã€ä½¿ç”¨äºŒåˆ†æ³•æœç´¢
+//4ã€powå‡½æ•°çš„è¿”å›žå€¼æ˜¯doubleï¼Œåœ¨longlongint ä¸­ï¼Œå½“æ•°å¾ˆå¤§çš„æ—¶å€™ï¼Œä¼šä¸¢å¤±ç²¾åº¦ï¼Œæ‰€ä»¥è¿˜éœ€è¦è‡ªå·±å†™ä¸€ä¸ªä¹˜æ–¹å‡½æ•°
 
 #include<iostream>
 #include<string>
@@ -17,11 +17,11 @@ unsigned long long n1_10, n2_10;
 
 unsigned long long tras(string n, unsigned long long rad)
 {
-	int num;								//±íÊ¾Î»Êý
+	int num;								//è¡¨ç¤ºä½æ•°
 	unsigned long long res = 0;
 	for (int i = 0; i < n.length(); i++)
 	{
-		if (n[i] <= 'z'&&n[i] >= 'a')			//Èç¹ûÕâ¸öÊýÊÇa~zÖ®¼ä
+		if (n[i] <= 'z'&&n[i] >= 'a')			//å¦‚æžœè¿™ä¸ªæ•°æ˜¯a~zä¹‹é—´
 			res = res*rad + (n[i] - 'a' + 10);
 		else
 			res = res*rad + (n[i] - '0');
@@ -29,12 +29,12 @@ unsigned long long tras(string n, unsigned long long rad)
 	return res;
 }
 
-unsigned long long getrad(string n)		//µÃµ½µÄÊÇ±È×Ö·û´®×î´óµÄÊýÂë»¹´ó1µÄÊý£¬¼´¶þ·Ö²éÕÒ·¨µÄÆðµã¡£
+unsigned long long getrad(string n)		//å¾—åˆ°çš„æ˜¯æ¯”å­—ç¬¦ä¸²æœ€å¤§çš„æ•°ç è¿˜å¤§1çš„æ•°ï¼Œå³äºŒåˆ†æŸ¥æ‰¾æ³•çš„èµ·ç‚¹ã€‚
 {
 	int zuida = 0;
 	for (int i = 0; i < n.length(); i++)
 	{
-		if (n[i] <= 'z'&&n[i] >= 'a')			//Èç¹ûÕâ¸öÊýÊÇa~zÖ®¼ä
+		if (n[i] <= 'z'&&n[i] >= 'a')			//å¦‚æžœè¿™ä¸ªæ•°æ˜¯a~zä¹‹é—´
 			zuida = zuida >(n[i] - 'a' + 10) ? zuida : (n[i] - 'a' + 10);
 		else
 			zuida = zuida > (n[i] - '0') ? zuida : (n[i] - '0');
@@ -47,8 +47,8 @@ void solution()
 	
 	cin >> n1 >> n2 >> tag >> radix;
 	unsigned long long low, high, mid;
-	//ÏÈÇóµÃn1»òÕßn2µÄ¾ßÌå10½øÖÆÖµ£¬×îºó½á¹ûµÄÆÀÅÐ¡£n1==n2Ê±£¬ÕÒµ½½øÖÆ¡£·ñÔòÃ»ÓÐ
-	//½øÖÆµÄ×îÐ¡ÖµÊÇn2ÊýµÄ×î´óÊýÂë+1£¬×î´óÖµÊÇn1µÄÊ®½øÖÆÖµ£¬ÒòÎª»á¸øÕâÖÖÇé¿ö£¬10000000 10 1 10£¬
+	//å…ˆæ±‚å¾—n1æˆ–è€…n2çš„å…·ä½“10è¿›åˆ¶å€¼ï¼Œæœ€åŽç»“æžœçš„è¯„åˆ¤ã€‚n1==n2æ—¶ï¼Œæ‰¾åˆ°è¿›åˆ¶ã€‚å¦åˆ™æ²¡æœ‰
+	//è¿›åˆ¶çš„æœ€å°å€¼æ˜¯n2æ•°çš„æœ€å¤§æ•°ç +1ï¼Œæœ€å¤§å€¼æ˜¯n1çš„åè¿›åˆ¶å€¼ï¼Œå› ä¸ºä¼šç»™è¿™ç§æƒ…å†µï¼Œ10000000 10 1 10ï¼Œ
 	if (tag == 2) { string temp = n1;  n1 = n2; n2 = temp; }
 
 	n1_10 = tras(n1, radix);

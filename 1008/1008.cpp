@@ -1,9 +1,9 @@
-#include<iostream>  
+﻿#include<iostream>  
 #pragma warning(disable:4996)
 
 using namespace std;
 
-int n, need, cost = 0, now = 0;					//floor�ǵ�ǰ�Ĳ�Σ�һ��ʼ��Ϊ0
+int n, need, cost = 0, now = 0;					//floor是当前的层次，一开始定为0
 
 void solution()
 {

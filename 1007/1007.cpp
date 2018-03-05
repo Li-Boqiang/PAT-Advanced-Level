@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #pragma warning(disable:4996)
 
 using namespace std;
@@ -6,15 +6,15 @@ using namespace std;
 int k = 0;
 int num[10001] = { 0 };
 int flag = 0;
-int temp = 0, sum = 0;						//temp±íÊ¾ÁÙÊ±ºÍ£¬sum±íÊ¾µ±Ç°ÒÑÖªµÄ×î´óºÍ
+int temp = 0, sum = 0;						//tempè¡¨ç¤ºä¸´æ—¶å’Œï¼Œsumè¡¨ç¤ºå½“å‰å·²çŸ¥çš„æœ€å¤§å’Œ
 int tempstart = 0;
-int start = 0, over = 0;								//start±íÊ¾×î´óºÍ×ÓÐòÁÐµÄ¿ªÊ¼£¬end±íÊ¾½áÊø
+int start = 0, over = 0;								//startè¡¨ç¤ºæœ€å¤§å’Œå­åºåˆ—çš„å¼€å§‹ï¼Œendè¡¨ç¤ºç»“æŸ
 int solution()
 {
 	//int *num = (int *)malloc(10001 * sizeof(int));
 	freopen("11.txt", "r", stdin);
 	cin >> k;
-	for (int i = 0; i < k; i++)				//ÊäÈëÕâK¸öÊý£¬Èç¹ûÓÐÕýÊý£¬ÄÇÃ´°Ñ±ê¼ÇÎªÖÃÎª1
+	for (int i = 0; i < k; i++)				//è¾“å…¥è¿™Kä¸ªæ•°ï¼Œå¦‚æžœæœ‰æ­£æ•°ï¼Œé‚£ä¹ˆæŠŠæ ‡è®°ä¸ºç½®ä¸º1
 	{
 		cin >> num[i];
 		if (num[i]>=0)
@@ -28,14 +28,14 @@ int solution()
 		return 0;
 	}
 	
-	for (int i = 0; i < k; i++)				//ÕâÀïÊÇÖÁÉÙÓÐÒ»¸öÕýÊýµÄ
+	for (int i = 0; i < k; i++)				//è¿™é‡Œæ˜¯è‡³å°‘æœ‰ä¸€ä¸ªæ­£æ•°çš„
 	{
 		temp += num[i];
 		
 		if (temp < 0)
 		{
 			temp = 0;
-			tempstart = i + 1;				//Èç¹ûµ±Ç°ºÍÐ¡ÓÚ0ÁË£¬ÖÃÎª0£¬²¢ÇÒ´ÓÏÂÒ»¸ö¿ªÊ¼
+			tempstart = i + 1;				//å¦‚æžœå½“å‰å’Œå°äºŽ0äº†ï¼Œç½®ä¸º0ï¼Œå¹¶ä¸”ä»Žä¸‹ä¸€ä¸ªå¼€å§‹
 			continue;
 		}
 		if (temp > sum)
