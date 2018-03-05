@@ -1,10 +1,10 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<vector>
 #pragma warning(disable:4996)
 
 using namespace std;
-int m;								//MÊÇÈËÊý
+int m;								//Mæ˜¯äººæ•°
 string in = "24:00:00", out = "00:00:00";
 string first, last;
 
