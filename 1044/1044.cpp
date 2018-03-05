@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #pragma warning(disable:4996)
 
@@ -8,7 +8,7 @@ int N, M;                        //N is the total number of diamonds on the chai
 int Chain[100010];
 bool Find = false;
 vector<int>SumFront;
-vector<int> Min;            //ÓÃÓÚ´æ´¢×î½Ó½üµÄ
+vector<int> Min;            //ç”¨äºŽå­˜å‚¨æœ€æŽ¥è¿‘çš„
 int temp;
 int Over = 0x7FFFFFFF;
 

@@ -1,6 +1,6 @@
-//ÌâÄ¿´óÒâ£¬¸øÒ»¸öÊäÈë£¬Èç¹ûÕâ¸öÊäÈëÊÇÄ³¶þ²æËÑË÷Ê÷µÄÇ°Ðò±éÀú
-//Ôò´òÓ¡yes£¬²¢Êä³öÕâ¸ö¶þ²æËÑË÷Ê÷µÄºóÐø±éÀúÐòÁÐ
-//´ÓÒ»¸öÇ°Ðò±ãÀûÖÐ»¹Ô­¶þ²æÊ÷
+ï»¿//é¢˜ç›®å¤§æ„ï¼Œç»™ä¸€ä¸ªè¾“å…¥ï¼Œå¦‚æžœè¿™ä¸ªè¾“å…¥æ˜¯æŸäºŒå‰æœç´¢æ ‘çš„å‰åºéåŽ†
+//åˆ™æ‰“å°yesï¼Œå¹¶è¾“å‡ºè¿™ä¸ªäºŒå‰æœç´¢æ ‘çš„åŽç»­éåŽ†åºåˆ—
+//ä»Žä¸€ä¸ªå‰åºä¾¿åˆ©ä¸­è¿˜åŽŸäºŒå‰æ ‘
 #include<iostream>
 #pragma warning(disable:4996)
 
@@ -35,7 +35,7 @@ void PreOrder(node* T)
 }
 
 
-void PostOrder(node* T)							//ºóÐòÊÇÏÈ×óºóÓÒ
+void PostOrder(node* T)							//åŽåºæ˜¯å…ˆå·¦åŽå³
 {
 	
 	if (T!=NULL)
@@ -69,7 +69,7 @@ void solution()
 		p = Node;
 		while (!SetNode)
 		{
-			if (p->value>Node[i].value)				//Òª·Åµ½×ó×ÓÊ÷
+			if (p->value>Node[i].value)				//è¦æ”¾åˆ°å·¦å­æ ‘
 			{
 				if (p->LeftChild == NULL)
 				{
@@ -107,7 +107,7 @@ void solution()
 	}
 	else 
 	{
-		//¿´ÊÇ²»ÊÇ¾µÏñBST
+		//çœ‹æ˜¯ä¸æ˜¯é•œåƒBST
 		for (int i = 0; i < Num; i++)
 		{
 			node* temp;

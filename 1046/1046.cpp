@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<vector>
 #pragma warning(disable:4996)
 #define min(a,b)    (((a) < (b)) ? (a) : (b))
