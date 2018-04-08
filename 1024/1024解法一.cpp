@@ -1,4 +1,4 @@
-//鍒ゆ柇鍥炴枃鏁扮殑鏂规硶锛岄�嗙疆锛岀湅閫嗙疆鍓嶅悗鏄惁鐩哥瓑
+//判断回文数的方法，逆置，看逆置前后是否相等
 #include<iostream>
 #include<algorithm>
 #include<string>
@@ -30,13 +30,13 @@ void getsum(string str)
 }
 void solution()
 {
-	int count, n;
+	int n;
 	string str;
-	cin >> num >> count;
+	cin >> num >> n;
 	for (int i = 0; i < n; i++)
 	{
 		str = num;
-		reverse(str.begin(), str.end());//str鏄痭um鐨勯�嗙疆
+		reverse(str.begin(), str.end());//str是num的逆置
 		if (str==num)
 		{
 			cout << num << endl << i;
