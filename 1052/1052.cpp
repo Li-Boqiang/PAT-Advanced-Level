@@ -1,52 +1,61 @@
-﻿//这个题目的坑在于，所给的信息中，有的节点并不在这个链表里
-#include<iostream>
-#include<string>
+﻿#include<iostream>
+#include<vector>
 #include<algorithm>
 #pragma warning(disable:4996)
-
 using namespace std;
-
-struct node
+typedef struct node
 {
-	string Address;
-	int Key;
-	string Next;
-	bool flag;
-}Node[10001];
+	int addr;
+	int next;
+	int key;
+	bool isLinked=false;
+}Node;
+int N, startaddr;
+vector<Node>LinkList(100001);
 
-bool comp(node a, node b)
+bool cmp(Node a, Node b)
 {
-	if (a.flag==false||b.flag==false)
-	{
-		return a.flag > b.flag;
-	}
+	if (!a.isLinked || !b.isLinked)				//两个全都在的话，判断结果为0，需要进行键值的比较
+		return a.isLinked > b.isLinked;
 	else
-		return a.Key < b.Key;
+		return
+		a.key < b.key;
 }
 void solution()
 {
-	int N, Head;
-	cin >> N >> Head;
-	for (int i = 0; i < N; i++)
+	int NodeNumber = 0;
+	for (int i = startaddr; i !=-1 ; i=LinkList[i].next)
 	{
-		cin >> Node[i].Address >> Node[i].Key >> Node[i].Next;
+		LinkList[i].isLinked = true;
+		NodeNumber++;
 	}
-	for (int i = Head; i != -1; i++)
+	if (NodeNumber == 0)
 	{
+		cout << "0 -1";
+		return;
+	}
 
-	}
-	sort(Node, Node + N,comp);
-	cout << N <<' '<< Node[0].Address << endl;
-	for (int i = 0; i < N-1; i++)
+	sort(LinkList.begin(), LinkList.end(), cmp);
+	printf("%d %05d\n", NodeNumber, LinkList[0].addr);
+	for (int i = 0; i < NodeNumber-1; i++)
 	{
-		cout << Node[i].Address << ' ' << Node[i].Key << ' ' << Node[i + 1].Address << endl;
+		printf("%05d %d %05d\n", LinkList[i].addr, LinkList[i].key, LinkList[i + 1].addr);
 	}
-	cout << Node[N - 1].Address << ' ' << Node[N - 1].Key << ' ' << "-1";
+	printf("%05d %d -1", LinkList[NodeNumber - 1].addr, LinkList[NodeNumber - 1].key);
+	return;
 }
 
-int main(void)
+int main()
 {
 	freopen("1.txt", "r", stdin);
+	cin >> N >> startaddr;
+	int addr;
+	for (int i = 0; i < N; i++)
+	{
+		cin >> addr;
+		LinkList[addr].addr = addr;
+		cin >> LinkList[addr].key >> LinkList[addr].next;
+	}
 	solution();
 	system("pause");
 	return 0;
