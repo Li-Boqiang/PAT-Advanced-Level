@@ -7,7 +7,7 @@ using namespace std;
 
 vector<int> list;
 long int N, p;
-int res = 0;			//num±íÊ¾ÓĞ¶àÉÙ¸öÊı
+int res = 0;			//numè¡¨ç¤ºæœ‰å¤šå°‘ä¸ªæ•°
 
 void solution()
 {

@@ -23,12 +23,12 @@ void DFS(int v)
 		int value = 0;
 		for (int i = 0; i < temppath.size(); i++)
 		{
-			value += weight[temppath[i]];				//¼ÇÂ¼µ±Ç°È¨ÖØ
+			value += weight[temppath[i]];				//è®°å½•å½“å‰æƒé‡
 		}
-		double tempavg = 1.0*value / (temppath.size() - 1);		//²»ËãÂÞÂí³ÇµÄ
+		double tempavg = 1.0*value / (temppath.size() - 1);		//ä¸ç®—ç½—é©¬åŸŽçš„
 		if (value>maxvalue)
 		{
-			maxvalue = value; maxavg = tempavg; path = temppath;			//¼ÇÂ¼µ±Ç°×î´óÖµÁË½âÒ»¹þ
+			maxvalue = value; maxavg = tempavg; path = temppath;			//è®°å½•å½“å‰æœ€å¤§å€¼äº†è§£ä¸€å“ˆ
 		}
 		else if (value==maxvalue&&tempavg>maxavg)
 		{
@@ -58,7 +58,7 @@ void solution()
 	{
 		cin >> str >> weight[i + 1];
 		m1[str] = i + 1;
-		m2[i + 1] = str;			//´æ´¢Ó³Éä¹ØÏµ
+		m2[i + 1] = str;			//å­˜å‚¨æ˜ å°„å…³ç³»
 	}
 	//input cost information
 	string a, b;
@@ -72,7 +72,7 @@ void solution()
 			e[m1[b]][m1[a]] = temp;
 		}
 	}
-	//dijËã·¨
+	//dijç®—æ³•
 	dis[1] = 0;
 	for (int i = 0; i < N; i++)
 	{
@@ -94,7 +94,7 @@ void solution()
 				{
 					dis[v] = dis[u] + e[u][v];
 					pre[v].clear();
-					pre[v].push_back(u);						//¼ÇÂ¼¿ÉÄÜµÄÂ·¾¶
+					pre[v].push_back(u);						//è®°å½•å¯èƒ½çš„è·¯å¾„
 				}
 				else if (dis[v] == dis[u] + e[u][v])
 				{

@@ -10,7 +10,7 @@ string ans,s;
 void solution()
 {
 	//cin >> N;
-	//cin.ignore();          //用这两个或者下面的scanf
+	//cin.ignore();          //鐢ㄨ繖涓や釜鎴栬�呬笅闈㈢殑scanf
 	scanf("%d\n", &N);
 
 	for (int i = 0; i < N; i++)
