@@ -1,0 +1,39 @@
+19
+Push 4
+Push 11
+Push 7
+Push 12
+Pop
+Pop
+Pop
+Push 14
+Push 17
+Pop
+Pop
+Push 6
+Push 18
+Pop
+Push 8
+Pop
+Pop
+Push 4
+Pop
+Pop
+Push 11
+Push 16
+Push 11
+Push 12
+Pop
+Push 2
+Pop
+Pop
+Pop
+Push 7
+Push 4
+Pop
+Pop
+Push 12
+Pop
+Pop
+Push 11
+Pop
